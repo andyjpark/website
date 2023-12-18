@@ -1,0 +1,29 @@
+---
+import { Picture } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+import UnderConstructionImage from "../images/under-constructions.png";
+---
+
+<Layout title="Projects">
+  <main>
+    <div class="tmp">
+      <Picture src={UnderConstructionImage} alt="Under construction" />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .tmp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: flex;
+      border-radius: 50%;
+      width: 500px;
+      height: 500px;
+    }
+  }
+</style>

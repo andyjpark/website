@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Publications">
+  <main>
+    <h1>Publications</h1>
+    <div class="publications">
+      <ol>
+        <li>
+          <span class="author">
+            A. J. Park, C. C. Pfeiffer, A. A. Chabanov, and A. Grbic,
+          </span>
+          <span class="title">
+            "Simultaneous transmit-receive horn antenna based on a nonreciprocal
+            metasurface with embedded magnetic bias",
+          </span>
+          <span class="journal">
+            International Workshop on Antenna Technoloy 2024,
+          </span>
+          <span class="status">under review, submitted Dec. 2023.</span>
+        </li>
+
+        <li>
+          <span class="author">
+            D. Kim*, A. J. Park*, D. Goo, U. -S. Suh, D. Kim, B. Yoon, W. Ra,
+            and S. Kim,
+          </span>
+          <span class="title">
+            "Accurate clutter synthesis model for heterogeneous textures and
+            dynamic radar environments",
+          </span>
+          <span class="journal">
+            IEEE Transaction on Aerospace and Electronic Systems, 58 (4),
+            pp.3427-3445, 2022
+          </span>
+          <span class="status">(*: First Authors)</span>
+        </li>
+
+        <li>
+          <span class="author">
+            J. Lee*, A. J. Park*, Y. Tanabe, A. S. Y. Poon, and S. Kim,
+          </span>
+          <span class="title">
+            "A microwave method to remotely assess the abdominal fat thickness",
+          </span>
+          <span class="journal">AIP Advances, 11, 035111, 2021</span>
+          <span class="status">(*: First Authors)</span>
+        </li>
+
+        <li>
+          <span class="author"> A. J. Park, D. Kim, D. Kim, and S. Kim,</span>
+          <span class="title">
+            "Variation of the shape parameter of K-distribution for sea clutter
+            with the spatial correlation of sea surface",
+          </span>
+          <span class="journal">
+            Progress in Electromagnetics Research Letters, 92, pp.25-30, 2020
+          </span>
+        </li>
+
+        <li>
+          <span class="author">
+            J. Park, J. Lee, B. Lee, A. S. Y. Poon, S. Lee, and S. Kim,
+          </span>
+          <span class="title">
+            "Measuring abdominal fatness using the principle of Salisbury
+            screen",
+          </span>
+          <span class="journal"> Electronics Letters, 53 (14), 2017</span>
+        </li>
+      </ol>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .publications {
+    ol {
+      counter-reset: publication-counter;
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        counter-increment: publication-counter; /* Increment the counter */
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+        position: relative;
+      }
+
+      li:before {
+        content: counter(publication-counter) "."; /* Display the counter */
+        position: absolute;
+        left: -30px; /* Adjust as needed */
+        /* top: 0; */
+        color: #666;
+      }
+
+      /* .author { */
+      /*   color: Blue; */
+      /* } */
+      /* .title { */
+      /*   color: Red; */
+      /* } */
+      /* .journal { */
+      /*   color: Black; */
+      /* } */
+      /* .status { */
+      /*   color: Grey; */
+      /* } */
+    }
+  }
+</style>
