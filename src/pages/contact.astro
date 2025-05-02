@@ -1,29 +1,30 @@
 ---
-import { Picture } from "astro:assets";
-
 import Layout from "../layouts/Layout.astro";
-import UnderConstructionImage from "../images/under-constructions.png";
 ---
 
 <Layout title="Contact">
   <main>
-    <div class="tmp">
-      <Picture src={UnderConstructionImage} alt="Under construction" />
+    <div class="email">
+      <p>📧 Contact me at: <a href="mailto:pjandrew@umich.edu">pjandrew@umich.edu</a></p>
     </div>
   </main>
 </Layout>
 
 <style>
-  .tmp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .email {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+  }
 
-    img {
-      display: flex;
-      border-radius: 50%;
-      width: 500px;
-      height: 500px;
-    }
+  .email a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .email a:hover {
+    text-decoration: underline;
   }
 </style>
