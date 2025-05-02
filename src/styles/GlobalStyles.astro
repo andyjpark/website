@@ -41,9 +41,11 @@ import "./variables.astro";
 
   body {
     margin: 0;
-    width: 100%;
+    max-width: 100%;
     min-height: 100%;
     overflow-x: hidden;
+    overflow-y: auto;
+    flex-wrap: wrap;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: #ffffff;
@@ -56,6 +58,10 @@ import "./variables.astro";
       font-size: var(--font-size-l);
     }
   }
+
+  html {
+  scroll-behavior: smooth;
+}
 
   #root {
     min-height: 100vh;
