@@ -7,23 +7,64 @@ import UnderConstructionImage from "../images/under-constructions.png";
 
 <Layout title="Honors and Awards">
   <main>
-    <div class="tmp">
-      <Picture src={UnderConstructionImage} alt="Under construction" />
+    <div class="honors_and_awards">
+      <ol>
+      <li>
+          <span class="award">
+            Student Paper Award for iWAT 2024,
+          </span>
+          <span class="location">
+            International Workshop on Antenna Technology 2024,
+          </span>
+          <span class="link">
+            <a
+          href="https://ece.engin.umich.edu/stories/andrew-park-wins-iwat-student-paper-award-for-work-on-star-antennas"
+          target="_blank">University of Michigan news,</a
+          >,
+          </span>
+          <span class="date"> 
+          Apr, 2025
+          </span>
+        </li>
+      </ol>
     </div>
   </main>
 </Layout>
 
 <style>
-  .tmp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .honors_and_awards {
+    ol {
+      counter-reset: honors_and_awards-counter;
+      list-style-type: none;
+      padding: 0;
 
-    img {
-      display: flex;
-      border-radius: 50%;
-      width: 500px;
-      height: 500px;
+      li {
+        counter-increment: honors_and_awards-counter; /* Increment the counter */
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+        position: relative;
+      }
+
+      li:before {
+        content: counter(honors_and_awards-counter) "."; /* Display the counter */
+        position: absolute;
+        left: -30px; /* Adjust as needed */
+        /* top: 0; */
+        color: #666;
+      }
+
+      /* .award { */
+      /*   color: Blue; */
+      /* } */
+      /* .location { */
+      /*   color: Red; */
+      /* } */
+      /* .link { */
+      /*   color: Black; */
+      /* } */
+      /* .date { */
+      /*   color: Grey; */
+      /* } */
     }
   }
 </style>
