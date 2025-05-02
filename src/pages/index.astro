@@ -12,33 +12,26 @@ import ProfileImage from "../images/me.jpeg";
 
 <Layout title="Andy">
   <main>
-    <!-- <Picture src={MetasurfaceImage} alt="Metasurface" /> -->
-    <!-- <Picture src={Metasurface2Image} alt="Metasurface" /> -->
-    <!-- <Picture src={LensImage} alt="Lens" /> -->
-    <!-- <Picture src={AbdominalFatThicknessImage} alt="Abdominal Fat Thickness" /> -->
-    <!-- <Picture src={GlucoseMonitoringMcuImage} alt="Glucose Monitoring MCU" /> -->
     <h1>Home</h1>
     <div class="about">
       <div class="bio">
-        Andrew J. Park received his B.S. (Received the Dean’s award for
-        graduating first rank in electronic engineering) and M.S. degrees in
-        Electronic Engineering from <a
-          href="https://www.khu.ac.kr/"
-          target="_blank">Kyung Hee University</a
-        > in 2019 and 2021, respectively. From 2017 to 2021, he worked in the <a
-          href="http://ael.khu.ac.kr"
-          target="_blank">Applied Electromagnetics Lab</a
-        > at Kyung Hee University. During this
-        period, he helped develop an AESA radar-integrated M&S software
-        supported by the Agency for Defense Development (ADD). His work also
-        includes a microwave method to remotely assess the abdominal fat
-        thickness and glucose real-time monitoring. He joined <a
-          href="grbic.engin.umich.edu"
-          target="_blank">Dr. Grbic’s lab</a
-        > as a Ph.D. student in June 2022. His current research interests
-        include applied electromagnetics, metasurfaces, and radar technologies.
+        <p>
+          Andrew J. Park received his B.S. (Received the Dean’s award for
+          graduating first rank in electronic engineering) and M.S. degrees in
+          Electronic Engineering from 
+          <a href="https://www.khu.ac.kr/" target="_blank">Kyung Hee University</a>
+          in 2019 and 2021, respectively. From 2017 to 2021, he worked in the 
+          <a href="http://ael.khu.ac.kr" target="_blank">Applied Electromagnetics Lab</a>
+          at Kyung Hee University. During this period, he helped develop an AESA
+          radar-integrated M&S software supported by the Agency for Defense Development (ADD).
+          His work also includes a microwave method to remotely assess the abdominal fat
+          thickness and glucose real-time monitoring. He joined 
+          <a href="https://grbic.engin.umich.edu" target="_blank">Dr. Grbic’s lab</a>
+          as a Ph.D. student in June 2022. His current research interests
+          include applied electromagnetics, metasurfaces, and radar technologies.
+        </p>
       </div>
-      <div>
+      <div class="image-wrapper">
         <Picture src={ProfileImage} alt="My profile image" class="profile" />
       </div>
     </div>
@@ -46,24 +39,51 @@ import ProfileImage from "../images/me.jpeg";
 </Layout>
 
 <style>
+  main {
+    padding: 2rem;
+  }
+
   .about {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
 
-    .bio {
-      padding: 40px;
-    }
+  .bio {
+    flex: 1;
+    min-width: 280px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto;
   }
 
   .profile {
-    display: flex;
     border-radius: 50%;
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile {
+      width: 200px;
+      height: 200px;
+    }
+
+    .bio {
+      text-align: center;
+    }
   }
 </style>
